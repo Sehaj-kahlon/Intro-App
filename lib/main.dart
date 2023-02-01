@@ -9,7 +9,7 @@ void main() {
 class MyApp extends StatelessWidget {
   // const MyApp({Key key}) : super(key: key);
   
-  get ignore => null;
+  // get ignore => null;
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
                 radius: 50.0,
                 // backgroundImage: AssetImage('images/sehaj.JPG'),
               ),
-              ignore : prefer_const_constructors
+              // ignore : prefer_const_constructors
               Text('Sehaj Kahlon',
                   style: TextStyle(
                       fontFamily: 'Pacifico',
@@ -32,7 +32,7 @@ class MyApp extends StatelessWidget {
                       letterSpacing: 2.0,
                       color: Colors.white
                       ),
-                    ,),
+                    ),
               Text(
                 'Student',
                 style: TextStyle(
@@ -64,7 +64,7 @@ class MyApp extends StatelessWidget {
                     ),
                   ),
               ),
-              ignore: prefer_const_constructors
+              // ignore: prefer_const_constructors
               Card(
                 color: Colors.white,
                 margin: EdgeInsets.symmetric(
@@ -89,4 +89,3 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-//
