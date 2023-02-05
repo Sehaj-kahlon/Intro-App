@@ -27,7 +27,7 @@ class MyApp extends StatelessWidget {
                 'Sehaj ',
                 style: TextStyle(
                     //font family
-                    fontFamily: 'Roboto-Black',
+                    fontFamily: 'Roboto-Italic',
                     fontSize: 60.0,
                     fontWeight: FontWeight.bold,
                     letterSpacing: 2.0,
