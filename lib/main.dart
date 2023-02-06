@@ -4,11 +4,7 @@ void main() {
   runApp(MyApp());
 }
 
-//stateless widgets
-//this widget returns a container
 class MyApp extends StatelessWidget {
-  // const MyApp({Key key}) : super(key: key);
-  // get ignore => null;
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -22,11 +18,9 @@ class MyApp extends StatelessWidget {
                 radius: 50.0,
                 backgroundImage: AssetImage('images/dummy2.JPG'),
               ),
-              // ignore : prefer_const_constructors
               Text(
                 'Sehaj ',
                 style: TextStyle(
-                    //font family
                     fontFamily: 'Roboto-Italic',
                     fontSize: 60.0,
                     fontWeight: FontWeight.bold,
@@ -43,13 +37,11 @@ class MyApp extends StatelessWidget {
                 ),
               ),
               Card(
-                //style properties in card
                 color: Colors.white,
                 margin: EdgeInsets.symmetric(
                   horizontal: 25.0,
                   vertical: 10.0,
                 ),
-                //listtile contians leading --icon , title -- text, trailing
                 child: ListTile(
                   leading: Icon(
                     Icons.phone,
@@ -66,7 +58,6 @@ class MyApp extends StatelessWidget {
                   ),
                 ),
               ),
-              // ignore: prefer_const_constructors
               Card(
                 color: Colors.white,
                 margin: EdgeInsets.symmetric(
