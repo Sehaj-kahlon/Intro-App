@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
                 backgroundImage: AssetImage('images/dummy2.JPG'),
               ),
               Text(
-                'Sehaj ',
+                'Sehaj Kahlon',
                 style: TextStyle(
                     fontFamily: 'Roboto-Italic',
                     fontSize: 60.0,
