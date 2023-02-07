@@ -76,6 +76,23 @@ class MyApp extends StatelessWidget {
                       )),
                 ),
               ),
+              Card(
+                color: Colors.white,
+                margin: EdgeInsets.symmetric(
+                  horizontal: 25.0,
+                  vertical: 10.0,
+                ),
+                child: ListTile(
+                  leading: Icon(Icons.message, color: Colors.lightBlueAccent),
+                  title: Text('Linkedin',
+                      style: TextStyle(
+                        color: Colors.lightBlueAccent,
+                        fontWeight: FontWeight.bold,
+                        letterSpacing: 1.0,
+                        fontSize: 20.0,
+                      )),
+                ),
+              ),
             ],
           ),
         ),
