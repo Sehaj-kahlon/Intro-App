@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+// import 'package:url_launcher/url_launcher.dart';
 
 void main() {
   runApp(MyApp());
@@ -84,6 +85,7 @@ class MyApp extends StatelessWidget {
                 ),
                 child: ListTile(
                   leading: Icon(Icons.message, color: Colors.lightBlueAccent),
+                  // subtitle: Text('Check for subtitle'),
                   title: Text('Linkedin',
                       style: TextStyle(
                         color: Colors.lightBlueAccent,
@@ -91,6 +93,7 @@ class MyApp extends StatelessWidget {
                         letterSpacing: 1.0,
                         fontSize: 20.0,
                       )),
+                  onTap: () {},
                 ),
               ),
             ],
