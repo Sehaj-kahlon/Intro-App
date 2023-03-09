@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'Options/Options.dart';
 
@@ -19,44 +21,48 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        backgroundColor: Color(0xFFEFDBE3),
-
         appBar: AppBar(
-            centerTitle: true,
-            // backgroundColor: Colors.lightBlue,
-            flexibleSpace: Container(
-              padding: const EdgeInsets.only(top: 20, left: 32, right: 32),
-              width: double.infinity,
-              decoration: const BoxDecoration(
-                gradient: LinearGradient(
-                  colors: [
-                    Color(0xFFB880E0),
-                    Color(0xFFF385A4),
-                    Color.fromARGB(247, 223, 128, 109),
-                  ],
-                  stops: [
-                    0.3,
-                    0.6,
-                    1,
-                  ],
-                  begin: Alignment.topRight,
-                  end: Alignment.bottomLeft,
-                ),
-              ),
+          centerTitle: true,
+          backgroundColor: Color.fromARGB(255, 223, 94, 145),
+          //  padding: const EdgeInsets.only(top: 20, left: 32, right: 32),
+          flexibleSpace: ClipRect(
+            // padding: const EdgeInsets.only(top: 20, left: 32, right: 32),
+            // width: double.infinity,
+            child: BackdropFilter(
+              filter: ImageFilter.blur(sigmaX: 60.0, sigmaY: 60.0),
+              child: Container(color: Colors.transparent),
             ),
-            toolbarHeight: 80,
-            elevation: 0,
-            title: const Text(
-              "LinkTree",
-              style: TextStyle(
-                  letterSpacing: 0.2,
-                  fontFamily: 'Roboto-Black',
-                  color: Colors.black,
-                  fontSize: 46,
-                  fontWeight: FontWeight.w400),
-            )),
+          ),
+          toolbarHeight: 80,
+          elevation: 2,
+
+          title: const Text(
+            "LinkTree",
+            style: TextStyle(
+                letterSpacing: 0.2,
+                fontFamily: 'Roboto-Black',
+                color: Colors.black,
+                fontSize: 46,
+                fontWeight: FontWeight.w400),
+          ),
+        ),
         body: SafeArea(
           child: Container(
+            decoration: BoxDecoration(
+                gradient: LinearGradient(
+              colors: [
+                Color(0xFFB880E0),
+                Color(0xFFF385A4),
+                Color.fromARGB(247, 223, 128, 109),
+              ],
+              stops: [
+                0.3,
+                0.6,
+                1,
+              ],
+              begin: Alignment.topRight,
+              end: Alignment.bottomLeft,
+            )),
             child: Padding(
               padding: const EdgeInsets.only(top: 20, left: 20, right: 20),
               child: Column(children: [
