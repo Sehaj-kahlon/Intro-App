@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-// import 'package:url_launcher/url_launcher.dart';
+import 'Options/Options.dart';
 
 void main() {
   runApp(MyApp());
@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
     return CircleAvatar(
       backgroundColor: Colors.lightBlueAccent,
       radius: 70,
-      backgroundImage: AssetImage('images/dummy2.JPG'),
+      backgroundImage: AssetImage('images/dummy2.jpg'),
     );
   }
 
@@ -57,11 +57,26 @@ class MyApp extends StatelessWidget {
             )),
         body: SafeArea(
           child: Container(
-            child: SingleChildScrollView(
-              padding: const EdgeInsets.only(top: 20, left: 32, right: 32),
+            child: Padding(
+              padding: const EdgeInsets.only(top: 20, left: 20, right: 20),
               child: Column(children: [
                 Flexible(child: Container(), flex: 0),
                 buildLogo(),
+                SizedBox(height: 10),
+                Text("Sehaj Kahlon",
+                    style: TextStyle(
+                        fontFamily: 'Roboto-Black',
+                        fontSize: 32,
+                        fontWeight: FontWeight.w500,
+                        letterSpacing: 0.3)),
+                // SizedBox(height: 5),
+                Text(
+                    "Bachelor of Electrical Engineering Student at Punjab Engineering College, Chandigarh",
+                    style: TextStyle(
+                      fontSize: 16,
+                    )),
+                SizedBox(height: 15),
+                options(),
               ]),
             ),
           ),
