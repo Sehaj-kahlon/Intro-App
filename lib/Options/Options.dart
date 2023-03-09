@@ -4,6 +4,14 @@ import '../responsive.dart';
 
 class options extends StatelessWidget {
   const options({super.key});
+  // _launchURLBrowser() async {
+  //   const url = 'https://en.wikipedia.org/wiki/Body_mass_index';
+  //   if (await launch(url)) {
+  //     await canLaunch(url);
+  //   } else {
+  //     throw 'Could not launch $url';
+  //   }
+  // }
 
   @override
   Widget build(BuildContext context) {
@@ -12,16 +20,15 @@ class options extends StatelessWidget {
     return Container(
         width: Responsive.isSmallScreen(context) ? width : width / 2,
         height: 450,
-        
         child: SingleChildScrollView(
           scrollDirection: Axis.vertical,
           padding: const EdgeInsets.only(top: 10, left: 10, right: 10),
           child:
               Column(crossAxisAlignment: CrossAxisAlignment.center, children: [
             Flexible(child: Container(), flex: 0),
-            
             ElevatedButton(
               onPressed: () async {},
+              // onPressed: _launchURLBrowser,
               child: Align(
                 alignment: Alignment.topCenter,
                 child: Row(
@@ -32,16 +39,19 @@ class options extends StatelessWidget {
                       Icons.phone,
                       size: 25,
                     ),
+                    SizedBox(
+                      width: 20,
+                    ),
                     Text('+91 9876217785', style: TextStyle(fontSize: 20)),
                   ],
                 ),
               ),
               style: ElevatedButton.styleFrom(
                 shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(5),
-                ),
+                    borderRadius: BorderRadius.circular(20),
+                    side: BorderSide(width: 1)),
                 elevation: 0.0,
-                // backgroundColor: Colors.blue,
+                backgroundColor: Colors.red.withOpacity(0.1),
                 padding:
                     EdgeInsets.only(top: 20, left: 20, right: 10, bottom: 20),
               ),
@@ -69,10 +79,10 @@ class options extends StatelessWidget {
               ),
               style: ElevatedButton.styleFrom(
                 shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(5),
-                ),
+                    borderRadius: BorderRadius.circular(20),
+                    side: BorderSide(width: 1)),
                 elevation: 0.0,
-                // backgroundColor: Colors.blue,
+                backgroundColor: Colors.lightBlueAccent.withOpacity(0.1),
                 padding:
                     EdgeInsets.only(top: 20, left: 20, right: 10, bottom: 20),
               ),
@@ -99,7 +109,6 @@ class options extends StatelessWidget {
                   borderRadius: BorderRadius.circular(5),
                 ),
                 elevation: 0.0,
-                // backgroundColor: Colors.blue,
                 padding:
                     EdgeInsets.only(top: 20, left: 20, right: 10, bottom: 20),
               ),
@@ -126,7 +135,6 @@ class options extends StatelessWidget {
                   borderRadius: BorderRadius.circular(5),
                 ),
                 elevation: 0.0,
-                // backgroundColor: Colors.blue,
                 padding:
                     EdgeInsets.only(top: 20, left: 20, right: 10, bottom: 20),
               ),
@@ -153,7 +161,6 @@ class options extends StatelessWidget {
                   borderRadius: BorderRadius.circular(5),
                 ),
                 elevation: 0.0,
-                // backgroundColor: Colors.blue,
                 padding:
                     EdgeInsets.only(top: 20, left: 20, right: 10, bottom: 20),
               ),
@@ -180,7 +187,6 @@ class options extends StatelessWidget {
                   borderRadius: BorderRadius.circular(5),
                 ),
                 elevation: 0.0,
-                // backgroundColor: Colors.blue,
                 padding:
                     EdgeInsets.only(top: 20, left: 20, right: 10, bottom: 20),
               ),
