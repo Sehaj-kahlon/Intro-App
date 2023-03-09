@@ -12,12 +12,14 @@ class options extends StatelessWidget {
     return Container(
         width: Responsive.isSmallScreen(context) ? width : width / 2,
         height: 450,
+        
         child: SingleChildScrollView(
           scrollDirection: Axis.vertical,
           padding: const EdgeInsets.only(top: 10, left: 10, right: 10),
           child:
               Column(crossAxisAlignment: CrossAxisAlignment.center, children: [
             Flexible(child: Container(), flex: 0),
+            
             ElevatedButton(
               onPressed: () async {},
               child: Align(

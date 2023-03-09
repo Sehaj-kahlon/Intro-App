@@ -76,7 +76,10 @@ class MyApp extends StatelessWidget {
                       fontSize: 16,
                     )),
                 SizedBox(height: 15),
-                options(),
+                Scrollbar(
+                  child: options(),
+                  thickness: 4,
+                )
               ]),
             ),
           ),
