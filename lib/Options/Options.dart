@@ -1,11 +1,16 @@
 import "package:flutter/material.dart";
 import 'package:url_launcher/url_launcher.dart';
+import '../responsive.dart';
+
 class options extends StatelessWidget {
   const options({super.key});
 
   @override
   Widget build(BuildContext context) {
+    double width = MediaQuery.of(context).size.width;
+    double height = MediaQuery.of(context).size.height;
     return Container(
+        width: Responsive.isSmallScreen(context) ? width : width / 2,
         height: 450,
         child: SingleChildScrollView(
           scrollDirection: Axis.vertical,
