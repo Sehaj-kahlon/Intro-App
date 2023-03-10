@@ -2,6 +2,11 @@ import "package:flutter/material.dart";
 import 'package:url_launcher/url_launcher.dart';
 import '../responsive.dart';
 import 'package:mailto/mailto.dart';
+import 'package:flutter/services.dart';
+
+final snackBar = SnackBar(
+  content: const Text('+91 9876217785 Copied to clipboard'),
+);
 
 class options extends StatelessWidget {
   const options({super.key});
@@ -41,6 +46,14 @@ class options extends StatelessWidget {
             Flexible(child: Container(), flex: 0),
             ElevatedButton(
               onPressed: () async {},
+              onLongPress: () => {
+                Clipboard.setData(ClipboardData(text: '+91 9876217785'))
+                    .then((value) {
+                  //only if ->
+                  ScaffoldMessenger.of(context).showSnackBar(snackBar);
+                }),
+              },
+
               // onPressed: _launchURLBrowser,
               child: Align(
                 alignment: Alignment.topCenter,
