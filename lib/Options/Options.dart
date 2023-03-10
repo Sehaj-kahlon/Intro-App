@@ -3,6 +3,7 @@ import 'package:url_launcher/url_launcher.dart';
 import '../responsive.dart';
 import 'package:mailto/mailto.dart';
 import 'package:flutter/services.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 final snackBar = SnackBar(
   content: const Text('+91 9876217785 Copied to clipboard'),
@@ -10,14 +11,15 @@ final snackBar = SnackBar(
 
 class options extends StatelessWidget {
   const options({super.key});
-  // _launchURLBrowser() async {
-  //   const url = 'https://en.wikipedia.org/wiki/Body_mass_index';
-  //   if (await launch(url)) {
-  //     await canLaunch(url);
-  //   } else {
-  //     throw 'Could not launch $url';
-  //   }
-  // }
+  _launchURLBrowser(String url) async {
+    url = '$url';
+    if (await launch(url)) {
+      await canLaunch(url);
+    } else {
+      throw 'Could not launch $url';
+    }
+  }
+
   launchMailto() async {
     final mailtoLink = Mailto(
       to: ['sehajkahlon437@gmail.com'],
@@ -25,9 +27,6 @@ class options extends StatelessWidget {
       // subject: 'mailto example subject',
       // body: 'mailto example body',
     );
-    // Convert the Mailto instance into a string.
-    // Use either Dart's string interpolation
-    // or the toString() method.
     await launch('$mailtoLink');
   }
 
@@ -44,17 +43,15 @@ class options extends StatelessWidget {
           child:
               Column(crossAxisAlignment: CrossAxisAlignment.center, children: [
             Flexible(child: Container(), flex: 0),
+            //contact
             ElevatedButton(
               onPressed: () async {},
               onLongPress: () => {
                 Clipboard.setData(ClipboardData(text: '+91 9876217785'))
                     .then((value) {
-                  //only if ->
                   ScaffoldMessenger.of(context).showSnackBar(snackBar);
                 }),
               },
-
-              // onPressed: _launchURLBrowser,
               child: Align(
                 alignment: Alignment.topCenter,
                 child: Row(
@@ -62,13 +59,25 @@ class options extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     Icon(
-                      Icons.phone,
+                      FontAwesomeIcons.whatsapp,
                       size: 25,
                     ),
                     SizedBox(
                       width: 20,
                     ),
                     Text('+91 9876217785', style: TextStyle(fontSize: 20)),
+                    // SizedBox(
+                    //   width: 50,
+                    // ),
+                    // IconButton(
+                    //   onPressed: () async {
+                    //     Clipboard.setData(ClipboardData(text: '+91 9876217785'))
+                    //         .then((value) {
+                    //       ScaffoldMessenger.of(context).showSnackBar(snackBar);
+                    //     });
+                    //   },
+                    //   icon: const Icon(Icons.copy),
+                    // ),
                   ],
                 ),
               ),
@@ -83,6 +92,7 @@ class options extends StatelessWidget {
               ),
             ),
             SizedBox(height: 10),
+            //email
             ElevatedButton(
               onPressed: () async {
                 launchMailto();
@@ -110,14 +120,18 @@ class options extends StatelessWidget {
                     borderRadius: BorderRadius.circular(20),
                     side: BorderSide(width: 1)),
                 elevation: 0.0,
-                backgroundColor: Colors.lightBlueAccent.withOpacity(0.1),
+                backgroundColor: Colors.red.withOpacity(0.1),
                 padding:
                     EdgeInsets.only(top: 20, left: 20, right: 10, bottom: 20),
               ),
             ),
             SizedBox(height: 10),
+            //linkedin
             ElevatedButton(
-              onPressed: () async {},
+              onPressed: () async {
+                _launchURLBrowser(
+                    'https://www.linkedin.com/in/sehaj-kahlon-35407025b');
+              },
               child: Align(
                 alignment: Alignment.topCenter,
                 child: Row(
@@ -125,25 +139,32 @@ class options extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     Icon(
-                      Icons.no_accounts,
+                      FontAwesomeIcons.linkedinIn,
                       size: 25,
                     ),
-                    Text('+91 9876217785', style: TextStyle(fontSize: 20)),
+                    SizedBox(
+                      width: 20,
+                    ),
+                    Text('Sehaj Kahlon', style: TextStyle(fontSize: 20)),
                   ],
                 ),
               ),
               style: ElevatedButton.styleFrom(
                 shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(5),
-                ),
+                    borderRadius: BorderRadius.circular(20),
+                    side: BorderSide(width: 1)),
                 elevation: 0.0,
+                backgroundColor: Colors.red.withOpacity(0.1),
                 padding:
                     EdgeInsets.only(top: 20, left: 20, right: 10, bottom: 20),
               ),
             ),
             SizedBox(height: 10),
+            //github
             ElevatedButton(
-              onPressed: () async {},
+              onPressed: () async {
+                _launchURLBrowser('https://github.com/Sehaj-kahlon');
+              },
               child: Align(
                 alignment: Alignment.topCenter,
                 child: Row(
@@ -151,25 +172,32 @@ class options extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     Icon(
-                      Icons.phone,
+                      FontAwesomeIcons.github,
                       size: 25,
                     ),
-                    Text('+91 9876217785', style: TextStyle(fontSize: 20)),
+                    SizedBox(
+                      width: 20,
+                    ),
+                    Text('Sehaj (Seahj-kahlon)',
+                        style: TextStyle(fontSize: 20)),
                   ],
                 ),
               ),
               style: ElevatedButton.styleFrom(
                 shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(5),
-                ),
+                    borderRadius: BorderRadius.circular(20),
+                    side: BorderSide(width: 1)),
                 elevation: 0.0,
+                backgroundColor: Colors.red.withOpacity(0.1),
                 padding:
                     EdgeInsets.only(top: 20, left: 20, right: 10, bottom: 20),
               ),
             ),
             SizedBox(height: 10),
             ElevatedButton(
-              onPressed: () async {},
+              onPressed: () async {
+                _launchURLBrowser('https://www.codechef.com/users/sehaj_4026');
+              },
               child: Align(
                 alignment: Alignment.topCenter,
                 child: Row(
@@ -177,25 +205,33 @@ class options extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     Icon(
-                      Icons.phone,
+                      FontAwesomeIcons.code,
                       size: 25,
                     ),
-                    Text('+91 9876217785', style: TextStyle(fontSize: 20)),
+                    SizedBox(
+                      width: 20,
+                    ),
+                    Text('CodeChef (sehaj_4026)',
+                        style: TextStyle(fontSize: 20)),
                   ],
                 ),
               ),
               style: ElevatedButton.styleFrom(
                 shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(5),
-                ),
+                    borderRadius: BorderRadius.circular(20),
+                    side: BorderSide(width: 1)),
                 elevation: 0.0,
+                backgroundColor: Colors.red.withOpacity(0.1),
                 padding:
                     EdgeInsets.only(top: 20, left: 20, right: 10, bottom: 20),
               ),
             ),
             SizedBox(height: 10),
             ElevatedButton(
-              onPressed: () async {},
+              onPressed: () async {
+                _launchURLBrowser(
+                    'https://twitter.com/Sehajkahlon437?t=z7v-6p1vBInisH8WOKfU0Q&s=09');
+              },
               child: Align(
                 alignment: Alignment.topCenter,
                 child: Row(
@@ -203,18 +239,22 @@ class options extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     Icon(
-                      Icons.phone,
+                      FontAwesomeIcons.twitter,
                       size: 25,
                     ),
-                    Text('+91 9876217785', style: TextStyle(fontSize: 20)),
+                    SizedBox(
+                      width: 20,
+                    ),
+                    Text('Sehaj Kahlon', style: TextStyle(fontSize: 20)),
                   ],
                 ),
               ),
               style: ElevatedButton.styleFrom(
                 shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(5),
-                ),
+                    borderRadius: BorderRadius.circular(20),
+                    side: BorderSide(width: 1)),
                 elevation: 0.0,
+                backgroundColor: Colors.red.withOpacity(0.1),
                 padding:
                     EdgeInsets.only(top: 20, left: 20, right: 10, bottom: 20),
               ),
