@@ -13,7 +13,8 @@ class MyApp extends StatelessWidget {
   Widget buildLogo() {
     return CircleAvatar(
       backgroundColor: Colors.lightBlueAccent,
-      radius: 70,
+      radius: 75,
+      // radius: MediaQuery.of(context).size.width * 0.0,
       backgroundImage: AssetImage('images/dummy2.jpg'),
     );
   }
@@ -24,7 +25,6 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           centerTitle: true,
           backgroundColor: Color.fromARGB(255, 223, 94, 145),
-          //  padding: const EdgeInsets.only(top: 20, left: 32, right: 32),
           flexibleSpace: ClipRect(
             // padding: const EdgeInsets.only(top: 20, left: 32, right: 32),
             // width: double.infinity,
@@ -35,7 +35,6 @@ class MyApp extends StatelessWidget {
           ),
           toolbarHeight: 80,
           elevation: 2,
-
           title: const Text(
             "LinkTree",
             style: TextStyle(

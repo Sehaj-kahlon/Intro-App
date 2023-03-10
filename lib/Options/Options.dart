@@ -1,6 +1,7 @@
 import "package:flutter/material.dart";
 import 'package:url_launcher/url_launcher.dart';
 import '../responsive.dart';
+import 'package:mailto/mailto.dart';
 
 class options extends StatelessWidget {
   const options({super.key});
@@ -12,6 +13,18 @@ class options extends StatelessWidget {
   //     throw 'Could not launch $url';
   //   }
   // }
+  launchMailto() async {
+    final mailtoLink = Mailto(
+      to: ['sehajkahlon437@gmail.com'],
+      // cc: ['cc1@example.com', 'cc2@example.com'],
+      // subject: 'mailto example subject',
+      // body: 'mailto example body',
+    );
+    // Convert the Mailto instance into a string.
+    // Use either Dart's string interpolation
+    // or the toString() method.
+    await launch('$mailtoLink');
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -58,7 +71,9 @@ class options extends StatelessWidget {
             ),
             SizedBox(height: 10),
             ElevatedButton(
-              onPressed: () async {},
+              onPressed: () async {
+                launchMailto();
+              },
               child: Align(
                 alignment: Alignment.topCenter,
                 child: Row(
