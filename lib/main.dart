@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         appBar: AppBar(
           centerTitle: true,
-          backgroundColor: Color.fromARGB(255, 223, 94, 145),
+          backgroundColor: Colors.blueGrey,
           flexibleSpace: ClipRect(
             // padding: const EdgeInsets.only(top: 20, left: 32, right: 32),
             // width: double.infinity,
@@ -75,7 +75,7 @@ class MyApp extends StatelessWidget {
                         fontWeight: FontWeight.w500,
                         letterSpacing: 0.3)),
                 // SizedBox(height: 5),
-                Text( 
+                Text(
                     "Bachelor of Electrical Engineering Student at Punjab Engineering College, Chandigarh",
                     style: TextStyle(
                       fontSize: 16,
