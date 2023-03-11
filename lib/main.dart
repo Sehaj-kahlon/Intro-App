@@ -75,7 +75,7 @@ class MyApp extends StatelessWidget {
                         fontWeight: FontWeight.w500,
                         letterSpacing: 0.3)),
                 // SizedBox(height: 5),
-                Text(
+                Text( 
                     "Bachelor of Electrical Engineering Student at Punjab Engineering College, Chandigarh",
                     style: TextStyle(
                       fontSize: 16,
