@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         appBar: AppBar(
           centerTitle: true,
-          backgroundColor: Colors.blueGrey,
+          backgroundColor: Color.fromARGB(255, 223, 94, 145),
           flexibleSpace: ClipRect(
             // padding: const EdgeInsets.only(top: 20, left: 32, right: 32),
             // width: double.infinity,

@@ -49,6 +49,7 @@ dev_dependencies:
   mailto: ^2.0.0
   font_awesome_flutter: ^10.4.0
   pull_to_refresh: ^1.6.4
+  google_fonts: ^2.3.1
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
