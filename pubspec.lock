@@ -152,6 +152,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.1.4"
+  pull_to_refresh:
+    dependency: "direct dev"
+    description:
+      name: pull_to_refresh
+      sha256: "53a7d67b8a4187e0a663b73d2bbf7b2578924b10610b07df1186e7d6284dfcfc"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.6.5"
   sky_engine:
     dependency: transitive
     description: flutter
