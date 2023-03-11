@@ -58,26 +58,19 @@ class options extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    Icon(
-                      FontAwesomeIcons.whatsapp,
-                      size: 25,
+                    IconButton(
+                      onPressed: () async {
+                        Clipboard.setData(ClipboardData(text: '+91 9876217785'))
+                            .then((value) {
+                          ScaffoldMessenger.of(context).showSnackBar(snackBar);
+                        });
+                      },
+                      icon: const Icon(Icons.copy),
                     ),
                     SizedBox(
-                      width: 20,
+                      width: 10,
                     ),
                     Text('+91 9876217785', style: TextStyle(fontSize: 20)),
-                    // SizedBox(
-                    //   width: 50,
-                    // ),
-                    // IconButton(
-                    //   onPressed: () async {
-                    //     Clipboard.setData(ClipboardData(text: '+91 9876217785'))
-                    //         .then((value) {
-                    //       ScaffoldMessenger.of(context).showSnackBar(snackBar);
-                    //     });
-                    //   },
-                    //   icon: const Icon(Icons.copy),
-                    // ),
                   ],
                 ),
               ),
