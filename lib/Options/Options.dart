@@ -60,7 +60,7 @@ class options extends StatelessWidget {
                   children: [
                     Icon(
                       FontAwesomeIcons.whatsapp,
-                      size: 25,
+                      size: 25 ,
                     ),
                     SizedBox(
                       width: 20,
