@@ -1,4 +1,4 @@
-# intro
+# LinkTree
 
 A new Flutter project.
 
